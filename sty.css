@@ -1,0 +1,160 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+  }
+  *::before, *::after{
+    padding: 0;
+    margin: 0;
+  }
+
+
+
+
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: rgb(207, 207, 207);
+    color: #ddd;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.dentro{
+    width: 350px;
+    height: 650px;
+    padding: 25px 30px;
+    overflow: hidden;
+    position: relative;
+    border-radius: 15px;
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.342);
+    background-blend-mode: screen;
+  }
+ 
+
+.imga {
+    width: 100%;
+ height: 280px;
+ overflow: hidden;
+ margin-top: 25px;
+ border-radius: 50%;
+ border-radius: 50%;
+   box-shadow: 0 0 0 5px #ffffff,
+   0 0 2px #fff,
+   13px 13px 20px #31313163,
+   -10px -10px 20px #e6f6ff;
+}
+
+.imga  img{
+    width: 100%;
+ height: 100%;
+ object-fit: cover;
+}
+
+
+.descricao {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.descricao .h2{
+    font-size: 21px;
+}
+.descricao .i{
+    font-size: 15px;
+    opacity: 0.9;
+    line-height: 35px;
+}
+
+
+.duracao {
+    width: 300px;
+    margin-top: 25px;
+}
+
+.barra {
+    width: 300px;
+    height: 6px;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+}
+.barra::before{
+    content: "";
+    position: absolute;
+    height: 12px;
+    width: 12px;
+    border-radius: 50%;
+    top: 50%;
+    right: -5px;
+    z-index: 2;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-50%);
+    background: inherit;
+    transition: opacity 0.2s ease;
+  }
+
+  .barra:hover .tempo::before{
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+
+
+
+
+progress {
+    height: 6px;
+    width: 0%;
+    margin-top: 2px;
+}
+
+.ponto {
+    width: 20px;
+    height: 20px;
+    background-color: #eee;
+    border-radius: 50%;
+    margin-left: -10px;
+}
+
+.tempo {
+    display: flex;
+    width: 300px;
+    justify-content: space-between;
+}
+.tempo .fim{
+    display: right;
+   
+    
+}
+.player {
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.botao-play, .botao-pause {
+    font-size: 50px;
+    cursor: pointer;
+}
+
+.setas {
+    font-size: 40px;
+    cursor: pointer;
+}
+
+.botao-pause {
+    display: none;
+}
